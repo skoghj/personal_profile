@@ -89,7 +89,7 @@ import footerlogo from "../assets/images/footer-logo.png";
     </div>
   </section>
 
-  <section class="flex flex-col max-w-7xl mx-auto justify-center pt-20 pb-20">
+  <section class="flex flex-col w-full max-w-7xl mx-auto justify-center pt-20 pb-20">
     <div>
       <h1 class="text-3xl flex items-end w-full text-[#FFE524]">
         CV
@@ -97,89 +97,98 @@ import footerlogo from "../assets/images/footer-logo.png";
       </h1>
     </div>
 
-    <article class="grid-cols-10 grid-rows-8 grid">
-      <div class="flex items-center justify-center col-start-1 col-end-3 row-start-1 row-end-4 border-solid border-r-2 border-[#FFE524]">
-        <Image src={education} alt="CV education" class="md:w-24" />
-      </div>
-
-      <div class="flex flex-col mx-auto col-start-3 col-end-5 row-start-1 row-end-4 p-4 border-solid border-r-2 border-[#FFE524] w-full">
-        <p class="text-[18px] font-bold pb-2">Uddannelse</p>
-
-        <div class="pb-2 text-left">
-          <p class="font-bold">KEA / Multimediedesigner</p>
-          <p>2023 - 2025, juni</p>
+    <div>
+      <article class="grid-cols-10 grid-rows-8 grid">
+        <div class="flex items-center justify-center col-start-1 col-end-3 row-start-1 row-end-4 border-solid border-r-2 border-[#FFE524]">
+          <Image src={education} alt="CV education" class="md:w-22" />
         </div>
 
-        <div>
-          <p class="font-bold">GIF / Dansk A</p>
-          <p>2022 - 2023, juni</p>
-        </div>
-      </div>
+        <div class="flex flex-col mx-auto col-start-3 col-end-5 row-start-1 row-end-4 p-6 border-solid border-r-2 border-[#FFE524] w-full">
+          <div class="flex flex-col justify-center mx-auto gap-2">
+            <p class="text-[18px] font-bold pb-2">Uddannelse</p>
 
-      <div class="flex items-center justify-center col-start-5 col-end-7 row-start-1 row-end-6 border-solid border-r-2 border-[#FFE524]">
-        <Image src={works} alt="CV education" class="md:w-24" />
-      </div>
+            <div class="pb-2 text-left">
+              <p class="font-bold">KEA / Multimediedesigner</p>
+              <p>2023 - 2025, juni</p>
+            </div>
 
-      <div class="flex flex-col mx-auto col-start-7 col-end-10 row-start-1 row-end-5 border-solid border-[#FFE524]">
-        <p class="text-[18px] font-bold pb-2">Erfaringer</p>
-        <div class="pb-2 text-left">
-          <p class="font-bold">Lampros Kraft / Product Listing Coordinator, Assistant</p>
-          <p>2015 - 2016 (i Sydkorea)</p>
-        </div>
-        <div>
-          <p class="font-bold">In The Block / Graphic Designer, Assistant</p>
-          <p>2014 - 2015 (i Sydkorea)</p>
-        </div>
-        <div>
-          <p class="font-bold">Sekyung Printing / Printing Designer, Deltidsjob</p>
-          <p>2011 - 2013 (i Sydkorea)</p>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-center col-start-3 col-end-5 row-start-4 row-end-9 border-solid border-r-2 border-t-2 border-[#FFE524]">
-        <Image src={fly} alt="CV education" class="md:w-24" />
-      </div>
-
-      <div class="flex flex-col mx-auto w-full col-start-1 col-end-3 row-start-4 row-end-9 p-4 border-solid border-r-2 border-t-2 border-[#FFE524]">
-        <p class="text-[18px] font-bold pb-2">Tværkulturel erfaring</p>
-        <div class="pb-2 text-left">
-          <p class="font-bold">Sverige</p>
-          <p>2017 - 2018</p>
+            <div>
+              <p class="font-bold">GIF / Dansk A</p>
+              <p>2022 - 2023, juni</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <p class="font-bold">Australien</p>
-          <p>2012 - 2014</p>
+        <div class="flex items-center justify-center col-start-5 col-end-7 row-start-1 row-end-6 border-solid border-r-2 border-[#FFE524]">
+          <Image src={works} alt="CV erfaringer" class="md:w-22" />
         </div>
 
-        <div>
-          <p class="font-bold">Japan</p>
-          <p>2010 - 2011</p>
+        <div class="flex flex-col mx-auto col-start-7 col-end-11 row-start-1 row-end-5 border-solid border-[#FFE524]">
+          <div class="flex flex-col justify-center mx-auto gap-2 px-10 pt-6">
+            <p class="text-[18px] font-bold pb-2">Erfaringer</p>
+            <div class="pb-2 text-left">
+              <p class="font-bold">Lampros Kraft / Product Listing Coordinator, Assistant</p>
+              <p>2015 - 2016 (i Sydkorea)</p>
+            </div>
+            <div>
+              <p class="font-bold">In The Block / Graphic Designer, Assistant</p>
+              <p>2014 - 2015 (i Sydkorea)</p>
+            </div>
+            <div>
+              <p class="font-bold">Sekyung Printing / Printing Designer, Deltidsjob</p>
+              <p>2011 - 2013 (i Sydkorea)</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="flex items-center justify-center col-start-8 col-end-10 row-start-6 row-end-9 border-solid w-full border-t-2 border-[#FFE524]">
-        <Image src={sprog} alt="CV education" class="md:w-24" />
-      </div>
+        <div class="flex items-center justify-center col-start-3 col-end-5 row-start-4 row-end-9 border-solid border-r-2 border-t-2 border-[#FFE524]">
+          <Image src={fly} alt="CV Tværkulturel erfaring" class="md:w-22" />
+        </div>
 
-      <div class="flex flex-col mx-auto justify-center place-items-center col-start-5 col-end-8 w-full row-start-6 row-end-9 border-solid border-r-2 border-t-2 border-[#FFE524]">
-        <p class="text-[18px] font-bold pb-2">Sprog</p>
-        <div class="pb-2 text-left">
-          <p class="font-bold">Koreansk / modersmål</p>
+        <div class="flex flex-col mx-auto w-full col-start-1 col-end-3 row-start-4 row-end-9 p-4 border-solid border-r-2 border-t-2 border-[#FFE524]">
+          <div class="flex flex-col justify-center mx-auto gap-2 p-4">
+            <p class="text-[18px] font-bold pb-2">Tværkulturel erfaring</p>
+            <div class="pb-2 text-left">
+              <p class="font-bold">Sverige</p>
+              <p>2017 - 2018</p>
+            </div>
+
+            <div>
+              <p class="font-bold">Australien</p>
+              <p>2012 - 2014</p>
+            </div>
+
+            <div>
+              <p class="font-bold">Japan</p>
+              <p>2010 - 2011</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="font-bold">Dansk / Dansk A</p>
+        <div class="flex items-center justify-center col-start-8 col-end-11 row-start-6 row-end-9 border-solid w-full border-t-2 border-[#FFE524]">
+          <Image src={sprog} alt="CV sprog" class="md:w-22" />
         </div>
-        <div>
-          <p class="font-bold">Engelsk / mellemstadie</p>
+
+        <div class="flex flex-col justify-center mx-auto col-start-5 col-end-8 w-full row-start-6 row-end-9 border-solid border-r-2 border-t-2 border-[#FFE524]">
+          <div class="flex flex-col justify-center mx-auto gap-2 p-4">
+            <p class="text-[18px] font-bold pb-2">Sprog</p>
+            <div>
+              <p class="font-bold">Koreansk / modersmål</p>
+            </div>
+            <div>
+              <p class="font-bold">Dansk / Dansk A</p>
+            </div>
+            <div>
+              <p class="font-bold">Engelsk / mellemstadie</p>
+            </div>
+            <div>
+              <p class="font-bold">Japansk / begynderniveau</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="font-bold">Japansk / begynderniveau</p>
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
+
+    <section></section>
+    <section></section>
   </section>
-
-  <section></section>
-  <section></section>
 </MainLayout>
