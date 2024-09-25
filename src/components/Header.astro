@@ -1,13 +1,29 @@
 ---
-
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import headerlogo from "../assets/images/header-logo.svg";
 ---
 
-<div class="flex justify-between list-none p-5 md:max-w-5xl mx-auto flex flex-row">
-  <p>Logo</p>
-  <div class="md:hidden"><i class="fa-solid fa-bars"></i></div>
-  <div class="hidden md:flex flex-low justify-between space-x-10">
-    <li>nav1</li>
-    <li>nav2</li>
-    <li>nav3</li>
+<div x-data="{ showmenu: false }" class="px-10 mx-auto static lg:static w-full z-10 bg-[#180B06]">
+  <div id="navbar" class="flex flex-row justify-between items-center py-4">
+    <div id="logo" class="">
+      <a href="#navbar" class=""><Image src={headerlogo} alt="quote_venstre" class="w-16" /></a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex flex-row gap-20 text-[#F4F4ED]">
+        <li class=""><Link href="#">LinkedIn</Link></li>
+        <li class=""><Link href="#projekter">Projekter</Link></li>
+        <li class=""><Link href="#kontakt">Kontakt</Link></li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
   </div>
+  <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul>
+      <li class=""><Link href="#kursusgange">Kursusgange</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+      <li class=""><Link href="#underviseren">Underviseren</Link></li>
+      <li class=""><Link href="#inspiration">Inspiration</Link></li>
+      <li class=""><Link href="#tilmelding">Tilmelding</Link></li>
+    </ul>
+  </nav>
 </div>

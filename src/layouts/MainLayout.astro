@@ -6,25 +6,25 @@ import "animate.css";
 const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="da" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{Astro.props.title}</title>
     <script src="https://kit.fontawesome.com/c5d83fc88a.js" crossorigin="anonymous"></script>
+    <title>{Astro.props.title}</title>
   </head>
-  <body>
-    <header>
+  <body class="bg-[#180B06]">
+    <header class="">
       <Header />
     </header>
 
-    <main>
+    <main class="text-[#F4F4ED] text-[16px] font-[hind-guntur-regular]">
       <slot />
     </main>
 
-    <footer>
+    <footer class="w-full">
       <Footer />
     </footer>
   </body>

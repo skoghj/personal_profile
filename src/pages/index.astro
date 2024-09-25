@@ -2,66 +2,184 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import profil from "../assets/images/profilpic.webp";
+import computer from "../assets/images/computer.svg";
+import puzzle from "../assets/images/puzzle.svg";
+import code from "../assets/images/code.svg";
+import education from "../assets/images/education.svg";
+import works from "../assets/images/works.svg";
+import sprog from "../assets/images/sprog.svg";
+import fly from "../assets/images/fly.svg";
+import footerlogo from "../assets/images/footer-logo.png";
 ---
 
-<MainLayout title="Titel">
-  <article class="mx-auto p-5 md:max-w-5xl">
-    <section class="mx-auto flex flex-col items-center md:grid grid-cols-3 gap-5 pb-10">
-      <div class="col-span-2 w-full"><img src="https://picsum.photos/800/500" alt="" class="w-full h-auto" /></div>
-      <div>
-        <p class="py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed culpa cupiditate dolore architecto! Voluptatibus delectus, iusto earum pariatur quaerat, incidunt tempore vero totam dolor officiis mollitia, tenetur quae aliquid!</p>
-        <div class="w-full flex justify-end pb-8">
-          <Button>Klik!</Button>
+<MainLayout title="personal professional profile">
+  <section>
+    <div class="w-full h-[300px] md:h-[500px] flex flex-col justify-center items-center relative">
+      <div class="flex justify-center items-center gap-4 relative">
+        <div class="">
+          <p class="text-[#F4F4ED] px-4 text-[24px] font-[text] tracking-wide">Kreativ / Organiseret / Engageret</p>
+          <h1 class="text-[#FFE524] px-4 text-5xl md:text-6xl lg:text-[100px] font-[Display]">DIGITAL DESIGNER</h1>
+          <h1 class="text-[#FFE524] px-4 text-5xl md:text-6xl lg:text-[100px] lg:flex justify-end pl-96 font-[Display]">HUI-JIN BAK</h1>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="mx-auto flex flex-col flex-shrink-0 w-full md:w-1/2">
-      <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <img src="https://picsum.photos/600/350" alt="" />
-      <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed culpa cupiditate dolore architecto! Voluptatibus delectus, iusto earum pariatur quaerat, incidunt tempore vero totam dolor officiis mollitia, tenetur quae aliquid!</p>
-      <div class="w-full flex justify-end pb-8">
-        <Button>Klik!</Button>
+  <section class="flex justify-center items-center mx-0 pb-20">
+    <div class="grid grid-cols-[auto_1fr] gap-10 mx-auto pt-20 md:max-w-7xl">
+      <div class="flex justify-end"><Image src={profil} alt="profil picture" class="md:w-[500px] h-[500px] object-cover rounded-lg" /></div>
+      <div class="flex flex-col items-start">
+        <h1 class="text-3xl flex items-end w-full text-[#FFE524]">
+          OM MIG
+          <span class="border-solid border-b-2 border-[#FFE524] flex-1 h-1 ml-2"></span>
+        </h1>
+        <p class="flex-1 items-center justify-center pt-16 px-4 text-[18px]">
+          <span>"</span>
+          Hej, jeg hedder Hui-jin Bak, og jeg er digital designer bosat i København, oprindeligt fra Sydkorea. Jeg studerer multimediedesign ved KEA og søger en praktikplads inden for UI/UX design og webdesign. Med erfaring i HTML, CSS og JavaScript har jeg skabt brugervenlige og responsive websites, der kombinerer æstetik med funktionalitet. Jeg er passioneret omkring webdesign og stræber efter at skabe digitale løsninger, der er både smukke og intuitive.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="grid md:grid-cols-3 gap-4 pb-10 text-center">
-      <div class="flex flex-col items-center">
-        <img src="https://picsum.photos/seed/picsum/250/250" alt="" class="pb-2" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <section class="bg-[#1E2A19] w-full">
+    <div class="flex flex-col mx-auto max-w-7xl justify-center pt-20 pb-20 w-full md:h-[600px]">
+      <div>
+        <h1 class="text-3xl flex items-end w-full text-[#FFE524]">
+          KVALIFIKATIONER
+          <span class="border-solid border-b-2 border-[#FFE524] flex-1 h-1 ml-2"></span>
+        </h1>
       </div>
-      <div class="flex flex-col items-center">
-        <img src="https://picsum.photos/seed/picsum/250/250" alt="" class="pb-2" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="flex flex-row justify-between mx-auto gap-60 pt-20">
+        <div class="flex flex-col">
+          <Image src={computer} alt="what do i do" class="md:w-24" />
+          <div class="pt-10 flex flex-col justify-center">
+            <h1 class="text-[18px] font-bold pb-4">Hvad jeg kan</h1>
+            <p>UI/UX design</p>
+            <p>Grafisk design</p>
+            <p>Webudvikling</p>
+            <p>Video- og billedredigering</p>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <Image src={code} alt="my tech stack" class="md:w-24" />
+          <div class="pt-10 flex flex-col justify-center">
+            <h1 class="text-[18px] font-bold pb-4">Min tekniske stak</h1>
+            <p>HTML / Tailwind CSS / JavaScript</p>
+            <p>Github / Git</p>
+            <p>Figma</p>
+            <p>Adobe Illustrator</p>
+            <p>Adobe Photoshop</p>
+            <p>Adobe Premiere Pro</p>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <Image src={puzzle} alt="what you can expect" class="md:w-24" />
+          <div class="pt-10 flex flex-col justify-center">
+            <h1 class="text-[18px] font-bold pb-4">Hvad jeg vil</h1>
+            <p>UI / UX design</p>
+            <p>Visuelt Design</p>
+            <p>Kode / interactive design</p>
+            <p>Nye frameworks / tools</p>
+            <p>Figma</p>
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col items-center">
-        <img src="https://picsum.photos/seed/picsum/250/250" alt="" class="pb-2" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="mx-auto flex flex-col flex-shrink-0 w-full md:w-1/2">
-      <p class="pb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <img src="https://picsum.photos/600/350" alt="" />
-      <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sed culpa cupiditate dolore architecto! Voluptatibus delectus, iusto earum pariatur quaerat, incidunt tempore vero totam dolor officiis mollitia, tenetur quae aliquid!</p>
-      <div class="w-full flex justify-end pb-8">
-        <Button>Klik!</Button>
-      </div>
-    </section>
+  <section class="flex flex-col max-w-7xl mx-auto justify-center pt-20 pb-20">
+    <div>
+      <h1 class="text-3xl flex items-end w-full text-[#FFE524]">
+        CV
+        <span class="border-solid border-b-2 border-[#FFE524] flex-1 h-1 ml-2"></span>
+      </h1>
+    </div>
 
-    <section class="grid md:grid-cols-3 gap-4 pb-2 text-center">
-      <div class="flex flex-col items-center">
-        <img src="https://picsum.photos/seed/picsum/250/250" alt="" class="pb-2" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <article class="grid-cols-10 grid-rows-8 grid">
+      <div class="flex items-center justify-center col-start-1 col-end-3 row-start-1 row-end-4 border-solid border-r-2 border-[#FFE524]">
+        <Image src={education} alt="CV education" class="md:w-24" />
       </div>
-      <div class="flex flex-col items-center">
-        <img src="https://picsum.photos/seed/picsum/250/250" alt="" class="pb-2" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="flex flex-col mx-auto col-start-3 col-end-5 row-start-1 row-end-4 p-4 border-solid border-r-2 border-[#FFE524] w-full">
+        <p class="text-[18px] font-bold pb-2">Uddannelse</p>
+
+        <div class="pb-2 text-left">
+          <p class="font-bold">KEA / Multimediedesigner</p>
+          <p>2023 - 2025, juni</p>
+        </div>
+
+        <div>
+          <p class="font-bold">GIF / Dansk A</p>
+          <p>2022 - 2023, juni</p>
+        </div>
       </div>
-      <div class="flex flex-col items-center">
-        <img src="https://picsum.photos/seed/picsum/250/250" alt="" class="pb-2" />
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="flex items-center justify-center col-start-5 col-end-7 row-start-1 row-end-6 border-solid border-r-2 border-[#FFE524]">
+        <Image src={works} alt="CV education" class="md:w-24" />
       </div>
-    </section>
-  </article>
+
+      <div class="flex flex-col mx-auto col-start-7 col-end-10 row-start-1 row-end-5 border-solid border-[#FFE524]">
+        <p class="text-[18px] font-bold pb-2">Erfaringer</p>
+        <div class="pb-2 text-left">
+          <p class="font-bold">Lampros Kraft / Product Listing Coordinator, Assistant</p>
+          <p>2015 - 2016 (i Sydkorea)</p>
+        </div>
+        <div>
+          <p class="font-bold">In The Block / Graphic Designer, Assistant</p>
+          <p>2014 - 2015 (i Sydkorea)</p>
+        </div>
+        <div>
+          <p class="font-bold">Sekyung Printing / Printing Designer, Deltidsjob</p>
+          <p>2011 - 2013 (i Sydkorea)</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center col-start-3 col-end-5 row-start-4 row-end-9 border-solid border-r-2 border-t-2 border-[#FFE524]">
+        <Image src={fly} alt="CV education" class="md:w-24" />
+      </div>
+
+      <div class="flex flex-col mx-auto w-full col-start-1 col-end-3 row-start-4 row-end-9 p-4 border-solid border-r-2 border-t-2 border-[#FFE524]">
+        <p class="text-[18px] font-bold pb-2">Tværkulturel erfaring</p>
+        <div class="pb-2 text-left">
+          <p class="font-bold">Sverige</p>
+          <p>2017 - 2018</p>
+        </div>
+
+        <div>
+          <p class="font-bold">Australien</p>
+          <p>2012 - 2014</p>
+        </div>
+
+        <div>
+          <p class="font-bold">Japan</p>
+          <p>2010 - 2011</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center col-start-8 col-end-10 row-start-6 row-end-9 border-solid w-full border-t-2 border-[#FFE524]">
+        <Image src={sprog} alt="CV education" class="md:w-24" />
+      </div>
+
+      <div class="flex flex-col mx-auto justify-center place-items-center col-start-5 col-end-8 w-full row-start-6 row-end-9 border-solid border-r-2 border-t-2 border-[#FFE524]">
+        <p class="text-[18px] font-bold pb-2">Sprog</p>
+        <div class="pb-2 text-left">
+          <p class="font-bold">Koreansk / modersmål</p>
+        </div>
+        <div>
+          <p class="font-bold">Dansk / Dansk A</p>
+        </div>
+        <div>
+          <p class="font-bold">Engelsk / mellemstadie</p>
+        </div>
+        <div>
+          <p class="font-bold">Japansk / begynderniveau</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section></section>
+  <section></section>
 </MainLayout>

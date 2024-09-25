@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  @font-face {
+    font-family: "Display"; /* Navn på fonten */
+    src: url("/src/font/behowleddisplay-webfont.woff2") format("woff2");
+    font-weight: normal; /* Normal vægt */
+    font-style: normal; /* Normal stil */
+  }
+  @font-face {
+    font-family: "text"; /* Navn på fonten */
+    src: url("/src/font/bombardgrotesk-regular-bf66ecdc9b4463e-webfont.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal; /* Normal stil */
+  }
 
+  @import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap");
+  .hind-guntur-regular {
+    font-family: "Hind Guntur", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
