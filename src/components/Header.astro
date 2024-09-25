@@ -1,19 +1,18 @@
 ---
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import headerlogo from "../assets/images/header-logo.svg";
 ---
 
 <div x-data="{ showmenu: false }" class="px-10 mx-auto static lg:static w-full z-10 bg-[#180B06]">
   <div id="navbar" class="flex flex-row justify-between items-center py-4">
     <div id="logo" class="">
-      <a href="#navbar" class=""><Image src={headerlogo} alt="quote_venstre" class="w-16" /></a>
+      <a href="#navbar" class="flex gap-2 hind-guntur-regular text-[#F4F4ED] hover:text-[#FFE524]">HjB <li></li></a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-20 text-[#F4F4ED]">
-        <li class=""><Link href="#">LinkedIn</Link></li>
-        <li class=""><Link href="#projekter">Projekter</Link></li>
-        <li class=""><Link href="#kontakt">Kontakt</Link></li>
+      <ul class="flex flex-row gap-20">
+        <li class=""><Link variant="textlink" size="small" href="https://www.linkedin.com/in/hui-jin-bak-9aa248305/">LinkedIn</Link></li>
+        <li class=""><Link variant="textlink" size="small" href="#projekter">Projekter</Link></li>
+        <li class=""><Link variant="textlink" size="small" href="#kontakt">Kontakt</Link></li>
       </ul>
     </nav>
     <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
