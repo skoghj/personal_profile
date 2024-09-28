@@ -98,4 +98,32 @@
       opacity: 0;
     }
   }
+
+  .hu__hu__ {
+    animation: hu__hu__ infinite 2s ease-in-out;
+  }
+  @keyframes hu__hu__ {
+    50% {
+      transform: translateY(30px);
+    }
+  }
+  .digital,
+  .susse,
+  .karussel,
+  .snuggy,
+  .pleasant,
+  .unge {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+  }
+  .digital,
+  .susse,
+  .karussel,
+  .snuggy,
+  .pleasant,
+  .unge:hover {
+    transform: scale(1.02); /* Scales the element to 110% */
+    box-shadow: 0px 0px 2px 2px #efefed;
+    padding: 4px;
+  }
 }

@@ -1,7 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import profil from "../assets/images/profilpic.webp";
 import computer from "../assets/images/computer.svg";
@@ -116,7 +114,7 @@ import favicon from "../assets/images/favicon_1.svg";
         </div>
 
         <div class="flex flex-col md:mx-auto md:justify-center md:items-center col-start-3 col-end-5 row-start-1 row-end-4 py-6 border-solid md:border-r-2 border-[#ecd14b] w-full">
-          <div class="flex flex-col md:justify-center md:px-6 md:mx-auto gap-2">
+          <div class="flex flex-col md:justify-center md:px-6 lg:mx-auto gap-2">
             <p class="text-[18px] font-bold pb-2">Uddannelse</p>
             <div class="pb-2 text-left">
               <p class="font-semibold break-words hyphens-auto">KEA / Multimediedesigner</p>
@@ -202,7 +200,7 @@ import favicon from "../assets/images/favicon_1.svg";
 
   <section class="px-4 md:px-6 md:pt-28">
     <div class="md:px-6">
-      <div class="flex flex-col mx-auto max-w-7xl justify-center pt-10 pb-10 md:pb-28 w-full">
+      <div class="flex flex-col mx-auto max-w-7xl justify-center pt-10 pb-10 md:pb-24 w-full">
         <h1 class="text-4xl md:px-6 md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]" id="projekter">
           Projekter
           <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
@@ -210,7 +208,7 @@ import favicon from "../assets/images/favicon_1.svg";
       </div>
 
       <article class="flex justify-start items-start content-start flex-wrap m-0 p-0 gap-[28px] row-gap-[20px] md:max-w-7xl mx-auto md:grid md:grid-cols-2 lg:grid-cols-3">
-        <div class="flex flex-col w-full digital">
+        <div class="flex flex-col w-full hover:digital">
           <a href="https://digitalskraldgruppe6.netlify.app/" target="_blank"><Image src={digital} alt="Digital skraldedag" class="w-full h-auto object-cover rounded-md" /></a>
           <h1 class="py-4 font-semibold text-[20px]">Digital skraldedag</h1>
           <div class="">
@@ -225,9 +223,9 @@ import favicon from "../assets/images/favicon_1.svg";
           </div>
         </div>
 
-        <div class="flex flex-col">
-          <div class="flex flex-col w-full justify-center susse">
-            <a href="https://sussevolanderart.netlify.app//" target="_blank"><Image src={susse} alt="Susse Volander" class="w-full h-auto object-cover rounded-md" /></a>
+        <div class="flex flex-col pt-6 md:pt-0">
+          <div class="flex flex-col w-full justify-center hover:susse">
+            <a href="https://sussevolanderart.netlify.app/" target="_blank"><Image src={susse} alt="Susse Volander" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Susse Volander</h1>
             <div class="">
               <p>Redesign af en eksisterende hjemmeside med fokus på forbedret UI / UX design, webudvikling og fotografi.</p>
@@ -240,7 +238,7 @@ import favicon from "../assets/images/favicon_1.svg";
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center karussel md:pt-10 lg:pt-0">
+        <div class="flex flex-col justify-center items-center hover:karussel pt-6 md:pt-10 lg:pt-0">
           <div class="flex flex-col">
             <a href="https://karruselfest.netlify.app/" target="_blank"><Image src={karrusel} alt="Karrusel" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Karrusel</h1>
@@ -255,8 +253,8 @@ import favicon from "../assets/images/favicon_1.svg";
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center snuggy md:pt-10">
-          <div class="flex flex-col mx-auto justify-center">
+        <div class="flex flex-col justify-center items-center pt-6 md:pt-10">
+          <div class="flex flex-col mx-auto justify-center hover:snuggy">
             <a href="https://snuggyseventyr.netlify.app/spil" target="_blank"><Image src={snuggy} alt="Snuggys Eventyr" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Snuggys Eventyr</h1>
             <div>
@@ -269,8 +267,8 @@ import favicon from "../assets/images/favicon_1.svg";
           </div>
         </div>
 
-        <div class="flex flex-col justify-center pleasant items-center md:pt-10">
-          <div class="flex flex-col">
+        <div class="flex flex-col justify-center items-center pt-6 md:pt-10">
+          <div class="flex flex-col hover:pleasant">
             <a href="https://www.youtube.com/watch?v=s2HgdR51fQc" target="_blank"><Image src={pleasant} alt="Pleasant" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Pleasant</h1>
             <div class="">
@@ -283,8 +281,8 @@ import favicon from "../assets/images/favicon_1.svg";
           </div>
         </div>
 
-        <div class="flex flex-col justify-center unge items-center md:pt-10">
-          <div class="flex flex-col justify-center">
+        <div class="flex flex-col justify-center items-center pt-6 md:pt-10">
+          <div class="flex flex-col justify-center hover:unge">
             <a href="https://www.youtube.com/watch?v=_enJwGTl9HU" target="_blank"><Image src={some} alt="Ungeanalyse" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Ungeanalyse</h1>
             <div class="">
@@ -336,13 +334,11 @@ import favicon from "../assets/images/favicon_1.svg";
 
   const uddannelse = document.querySelector(".uddannelse");
   inView(uddannelse, ({ target }) => {
-    target.classList.add("animate__animated", "animate__bounce", "fadeInOpacity");
+    target.classList.add("animate__animated", "animate__rotateIn", "fadeInOpacity");
   });
   const erfaring = document.querySelector(".erfaring");
   inView(erfaring, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__bounce", "fadeInOpacity");
-    }, 1000);
+    target.classList.add("animate__animated", "animate__rotateIn", "fadeInOpacity");
   });
   const fly = document.querySelector(".fly");
   inView(fly, ({ target }) => {
@@ -351,46 +347,6 @@ import favicon from "../assets/images/favicon_1.svg";
 
   const sprog = document.querySelector(".sprog");
   inView(sprog, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__rotateIn", "fadeInOpacity");
-    }, 1000);
-  });
-
-  const digital = document.querySelector(".digital");
-  inView(digital, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
-    }, 1000);
-  });
-
-  const susse = document.querySelector(".susse");
-  inView(susse, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");
-    }, 1000);
-  });
-  const karussel = document.querySelector(".karussel");
-  inView(karussel, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
-    }, 1000);
-  });
-  const snuggy = document.querySelector(".snuggy");
-  inView(snuggy, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
-    }, 1000);
-  });
-  const pleasant = document.querySelector(".pleasant");
-  inView(pleasant, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");
-    }, 1000);
-  });
-  const unge = document.querySelector(".unge");
-  inView(unge, ({ target }) => {
-    setTimeout(() => {
-      target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
-    }, 1000);
+    target.classList.add("animate__animated", "animate__rotateIn", "fadeInOpacity");
   });
 </script>
