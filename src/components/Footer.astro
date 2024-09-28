@@ -1,39 +1,70 @@
 ---
 import linkedin from "../assets/images/linkedin.svg";
 import { Image } from "astro:assets";
+import kontakt from "../assets/images/contact.svg";
+import emailikon from "../assets/images/emailikon.svg";
+import adresse from "../assets/images/adresse.svg";
 ---
 
-<section>
-  <div class="flex flex-col px-6 max-w-7xl justify-center pt-10 pb-20 w-full">
-    <h1 class="text-6xl flex items-end w-full text-[#ecd14b] font-[Display]" id="projekter">
+<section class="pt-10 md:pt-28" id="kontakt">
+  <div class="flex flex-col px-6 max-w-7xl justify-center mx-auto w-full">
+    <h1 class="text-4xl md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]" id="projekter">
       Kontakt
       <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
     </h1>
-    <h2 class="flex gap-2 text-4xl pt-20 text-[#F4F4ED]">
-      Jeg glæder mig til at høre fra dig<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
-        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 0 0-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634Zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 0 1-.189-.866c0-.298.059-.605.189-.866Zm2.023 6.828a.75.75 0 1 0-1.06-1.06 3.75 3.75 0 0 1-5.304 0 .75.75 0 0 0-1.06 1.06 5.25 5.25 0 0 0 7.424 0Z" clip-rule="evenodd"></path>
-      </svg>
-    </h2>
-    <p class="flex gap-2 pt-10 pb-2 text-[#F4F4ED] text-[20px]">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"></path>
-        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"></path>
-      </svg>
-      huba0001@stud.kea.dk
-    </p>
-    <a href="https://www.linkedin.com/in/hui-jin-bak-9aa248305/" class="flex gap-2 text-[20px]">
-      <Image src={linkedin} alt="linkedin logo" class="md:w-6" />
-      <p class="text-[#F4F4ED]">Her er min LinkedIn profil</p>
-    </a>
   </div>
 </section>
-<div>
-  <section class="px-6 flex flex-wrap md:max-w-7xl mx-auto items-center">
-    <div class="mx-auto flex-wrap flex gap-10 pb-10 text-[#FFE524]">
-      <p class="flex-shrink-0">LinkedIn</p>
-      <p class="flex-shrink-0">E-mail</p>
-      <p class="flex-shrink-0">Instagram</p>
-      <p class="flex-shrink-0">Youtube</p>
+<section class="max-w-7xl justify-center mx-auto w-full px-6 md:grid md:grid-cols-[auto_auto] md:justify-start md:gap-12">
+  <div>
+    <div><Image src={kontakt} alt="kontakt mig" class="w-60 md:w-80 flex mx-auto justify-center pt-10 md:justify-end kontakt" /></div>
+  </div>
+
+  <div class="flex flex-col mx-auto justify-center items-center md:items-start">
+    <h2 class="flex gap-2 text-[24px] md:text-[32px] text-[#ecd14b] font-bold lg:pl-20 tracking-wide font-[Display]">Jeg glæder mig til at høre fra dig!</h2>
+    <div class="pt-6 flex flex-col gap-4 md:flex-row md:justify-center md:items-center md:gap-6">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mx-auto flex size-16 text-[#ecd14b] font-bold md:hidden">
+          <path fill-rule="evenodd" d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z" clip-rule="evenodd"></path>
+          <path fill-rule="evenodd" d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z" clip-rule="evenodd"></path>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="hidden md:block mx-auto size-16 text-[#ecd14b]">
+          <path fill-rule="evenodd" d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd"></path>
+          <path fill-rule="evenodd" d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <div>
+        <div class="flex pb-2 text-[#F4F4ED]">
+          <a href="mailto:huba0001@stud.kea.dk" class="text-[#F4F4ED] gap-2 items-center hover:text-[#ecd14b] flex flex-row">
+            <Image src={emailikon} alt="email" class="size-10" />
+            huba0001@stud.kea.dk
+          </a>
+        </div>
+        <div class="flex gap-2 pb-2 text-[#F4F4ED]">
+          <a href=" https: www.linkedin.com in hui-jin-bak-9aa248305 " class="text-[#F4F4ED] items-center gap-2 hover:text-[#ecd14b] flex flex-row">
+            <Image src={linkedin} alt="linkedin " class="size-9" />
+            LinkedIn
+          </a>
+        </div>
+        <div class="flex gap-2 pb-2 text-[#F4F4ED]">
+          <div class="text-[#F4F4ED] gap-2 hover:text-[#ecd14b] items-center flex flex-row">
+            <Image src={adresse} alt="adresse " class="size-9" />
+            Kongens Lyngby, København, Danmark
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<div id="logo" class="flex justify-end max-auto py-10 px-6">
+  <a href="#om-mig" class="flex gap-1 hind-guntur-regular text-[#ecd14b] text-[20px]">HjB <li></li></a>
 </div>
+
+<script>
+  import { inView } from "motion";
+  const kontakt = document.querySelector(".kontakt");
+  inView(kontakt, ({ target }) => {
+    target.classList.add("animate__animated", "animate__jackInTheBox", "fadeInOpacity");
+  });
+</script>

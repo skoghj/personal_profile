@@ -3,10 +3,10 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 ---
 
-<div x-data="{ showmenu: false }" class="px-4 mx-auto static lg:static w-full z-10 bg-[#180B06]">
+<div x-data="{ showmenu: false }" class="px-4 mx-auto fixed lg:fixed w-full z-10 bg-[#180B06]">
   <div id="navbar" class="flex flex-row justify-between items-center py-4">
     <div id="logo" class="">
-      <a href="#navbar" class="flex gap-2 hind-guntur-regular text-[#F4F4ED] hover:text-[#ecd14b]">HjB <li></li></a>
+      <a href="/" class="flex gap-1 hind-guntur-regular text-[#F4F4ED] text-[20px] hover:text-[#ecd14b]">HjB <li></li></a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-20">
@@ -24,7 +24,7 @@ import { Image } from "astro:assets";
   </div>
   <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul>
-      <ul class="flex flex-col justify-center items-center gap-6">
+      <ul class="flex flex-col justify-center items-center gap-6 pb-10">
         <li class=""><Link variant="textlink" size="small" href="https://www.linkedin.com/in/hui-jin-bak-9aa248305/">LinkedIn</Link></li>
         <li class=""><Link variant="textlink" size="small" href="#projekter">Projekter</Link></li>
         <li class=""><Link variant="textlink" size="small" href="#kontakt">Kontakt</Link></li>

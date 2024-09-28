@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import profil from "../assets/images/profilpic.webp";
 import computer from "../assets/images/computer.svg";
 import puzzle from "../assets/images/puzzle.svg";
-import code from "../assets/images/code.svg";
+import code from "../assets/images/codning.svg";
 import education from "../assets/images/education.svg";
 import works from "../assets/images/works.svg";
 import sprog from "../assets/images/sprog.svg";
@@ -17,74 +17,82 @@ import karrusel from "../assets/images/karrusel.webp";
 import snuggy from "../assets/images/snuggy.webp";
 import pleasant from "../assets/images/pleasant.webp";
 import some from "../assets/images/some.webp";
+import favicon from "../assets/images/favicon_1.svg";
 ---
 
 <MainLayout title="personal professional profile">
-  <section class="flex flex-col justify-center items-center pt-14 md:px-6">
+  <section class="flex flex-col justify-center items-center pt-32 md:px-6 md-pt-0" id="om-mig">
     <div class="w-full flex flex-col justify-center items-center relative md:h-[300px] lg:h-[500px]">
       <div class="flex justify-center items-center mx-auto gap-4 relative">
         <div class="flex flex-col justify-center px-4">
-          <p class="text-[#F4F4ED] text-[18px] font-[text] tracking-wide md:px-4 md:text-[24px]">Kreativ / Organiseret / Engageret</p>
-          <h1 class="text-[#ecd14b] text-6xl md:px-4 lg:text-[100px] font-[Display]">DIGITAL DESIGNER</h1>
-          <h1 class="text-[#ecd14b] text-6xl flex justify-start md:px-4 lg:text-[100px] md:justify-end md:pl-72 lg:pl-96 font-[Display]">HUI-JIN BAK</h1>
+          <p class="text-[#F4F4ED] text-[18px] font-[text] tracking-wide md:px-4 md:text-[24px] animate__animated animate__slideInUp">Kreativ / Organiseret / Engageret</p>
+          <h1 class="text-[#ecd14b] text-4xl break-words hyphens-auto md:px-4 md:text-6xl lg:text-[100px] font-[Display] cssanimation leBlurInRight sequence">DIGITAL DESIGNER</h1>
+          <div class="flex">
+            <div class="text-[#ecd14b] text-4xl flex justify-start md:px-4 md:text-6xl lg:text-[100px] md:justify-end md:pl-72 lg:pl-72 font-[Display]">
+              <Image src={favicon} alt="me" class="hidden md:block md:w-24 justify-end w-full animate__animated animate__lightSpeedInLeft m-2" />
+              <h1 class="cssanimation leBlurInRight sequence">HUI-JIN BAK</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="flex flex-col justify-center px-4 items-center mx-0 pb-10 md:pb-20">
-    <div class="w-full gap-10 mx-auto pt-20 md:grid md:grid-cols-2 md:max-w-7xl md:px-6">
-      <div class="flex justify-center items-center md:justify-start md:items-start"><Image src={profil} alt="profil picture" class="w-full h-auto rounded-lg" /></div>
-      <div class="flex flex-col items-start">
-        <h1 class="text-4xl pt-10 md:pt-0 md:text-6xl flex items-end w-full text-[#ecd14b] font-[Display]">
+  <section class="flex flex-col justify-center px-4 items-center mx-0 pb-10 md:pb-28">
+    <div class="w-full gap-10 mx-auto pt-10 md:pt-20 md:grid md:grid-cols-2 md:max-w-7xl md:px-6">
+      <div class="flex justify-center items-center profil md:justify-start md:items-start"><Image src={profil} alt="profil picture" class="w-full h-auto rounded-lg" /></div>
+      <div class="flex flex-col items-start om_mig">
+        <h1 class="text-4xl pt-10 md:pt-0 md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]">
           Om mig
           <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
         </h1>
         <p class="flex-1 items-center justify-center pt-6 lg:text-justify md:pt-6 lg:mt-8 lg:px-8">
-          Hej, jeg hedder <span class="font-bold italic text-[#ecd14b]">Hui-jin Bak</span>, og jeg er <span class="font-bold text-[#ecd14b] italic">digital designer </span> bosat i København, oprindeligt fra Sydkorea. Jeg studerer multimediedesign ved KEA Jeg studerer multimediedesign ved KEA og har udviklet 10 forskellige hjemmesider i løbet af mine halvandet år på studiet. Jeg søger <span class="font-bold text-[#ecd14b] italic">en praktikplads</span> inden for <span class="font-bold text-[#ecd14b] italic">UI/UX design og webdesign.</span> Med erfaring i HTML, CSS og JavaScript har jeg skabt brugervenlige og responsive websites, der kombinerer æstetik med funktionalitet. Jeg er passioneret omkring webdesign og stræber efter at skabe digitale løsninger, der er både smukke og intuitive.
+          Hej, mit navn er <span class="font-bold italic text-[#ecd14b]">Hui-jin Bak</span>, og jeg er <span class="font-bold text-[#ecd14b] italic">en digital designer</span> bosat i København. Jeg kommer oprindeligt fra Sydkorea, og <span class="font-bold italic text-[#ecd14b]">studerer nu multimediedesign på KEA.</span> I løbet af mine halvandet år på studiet, har jeg udviklet 10 forskellige hjemmesider. Jeg søger <span class="font-bold text-[#ecd14b] italic">en praktikplads</span> inden for <span class="font-bold text-[#ecd14b] italic">UI/UX design, webdesign og grafisk design.</span> Med erfaring i HTML, CSS, JavaScript og Figma har jeg skabt brugervenlige og responsive websites, der kombinerer æstetik med funktionalitet. Jeg er passioneret omkring webdesign og stræber efter at skabe digitale
+          løsninger, der er både smukke og intuitive.
         </p>
       </div>
     </div>
   </section>
 
   <section class="bg-[#1e2e17] w-full md:px-6">
-    <div class="flex flex-col mx-auto md:max-w-7xl justify-center pt-10 pb-10 w-full md:h-[700px]">
+    <div class="flex flex-col mx-auto justify-center pt-10 pb-10 w-full md:max-w-7xl md:h-[700px]">
       <div>
-        <h1 class="text-4xl px-4 md:text-6xl flex items-end w-full text-[#ecd14b] font-[Display]">
+        <h1 class="text-4xl px-4 md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]">
           Kvalifikationer
           <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
         </h1>
       </div>
-      <div class="flex flex-col pt-10 px-4 gap-10 md:flex-row md:mx-auto md:gap-20 md:pt-20 lg:gap-60">
-        <div class="sm:grid grid-cols-2 w-full md:flex flex-col">
-          <Image src={computer} alt="what do i do" class="flex justify-center items-center mx-auto md:flex md:justify-start md:items-start md:mx-0" />
+
+      <div class="flex flex-col pt-10 px-4 gap-10 md:flex-row md:gap-20 md:pt-20 lg:justify-items-center lg:grid lg:grid-cols-[repeat(5,auto)]">
+        <div class="sm:grid grid-cols-2 w-full md:flex flex-col lg:col-start-2 lg:col-end-3">
+          <Image src={computer} alt="what do i do" class="computer flex justify-center items-center mx-auto md:flex md:justify-start md:items-start md:mx-0" />
           <div class="flex flex-col justify-center items-center pt-2 md:flex md:justify-start md:items-start md:pt-10">
             <h1 class="text-[18px] font-bold pb-4">Hvad jeg kan</h1>
-            <p>UI/UX design</p>
+            <p>UI / UX design</p>
             <p>Grafisk design</p>
             <p>Webudvikling</p>
             <p>Video- og billedredigering</p>
           </div>
         </div>
-        <div class="sm:grid grid-cols-2 w-full md:flex flex-col">
-          <Image src={code} alt="my tech stack" class="flex justify-center items-center mx-auto md:flex md:justify-start md:items-start md:mx-0" />
+        <div class="sm:grid grid-cols-2 w-full md:flex flex-col lg:col-start-3 lg:col-end-4">
+          <Image src={code} alt="my tech stack" class="code flex justify-center items-center mx-auto pt-2 md:flex md:justify-start md:items-start md:mx-0" />
           <div class="flex flex-col justify-center items-center pt-2 md:flex md:justify-start md:items-start md:pt-10">
-            <h1 class="text-[18px] font-bold pb-4">Min tekniske stak</h1>
+            <h1 class="text-[18px] font-bold pb-4">Min tech stack</h1>
             <p>HTML / Tailwind CSS / JavaScript</p>
-            <p>Github / Git</p>
+            <p>GitHub / Git</p>
             <p>Figma</p>
             <p>Adobe Illustrator</p>
             <p>Adobe Photoshop</p>
             <p>Adobe Premiere Pro</p>
           </div>
         </div>
-        <div class="sm:grid grid-cols-2 w-full md:flex flex-col">
-          <Image src={puzzle} alt="what you can expect" class="flex justify-center items-center mx-auto md:flex md:justify-start md:items-start md:mx-0" />
+        <div class="sm:grid grid-cols-2 w-full md:flex flex-col lg:col-start-4 lg:col-end-5">
+          <Image src={puzzle} alt="what you can expect" class="puzzle flex justify-center items-center mx-auto md:flex md:justify-start md:items-start md:mx-0" />
           <div class="flex flex-col justify-center items-center pt-2 md:flex md:justify-start md:items-start md:pt-10">
             <h1 class="text-[18px] font-bold pb-4">Hvad jeg vil</h1>
             <p>UI / UX design</p>
             <p>Visuelt Design</p>
-            <p>Kode / interactive design</p>
+            <p>Kode / interaktivt design</p>
             <p>Nye frameworks / tools</p>
             <p>Figma</p>
           </div>
@@ -93,18 +101,18 @@ import some from "../assets/images/some.webp";
     </div>
   </section>
 
-  <section class="flex flex-col w-full px-4 mx-auto justify-center pt-10 md:pt-24 md:max-w-7xl md:px-6">
+  <section class="flex flex-col w-full px-4 mx-auto justify-center pt-10 md:pt-28 md:max-w-7xl md:px-6">
     <div>
-      <h1 class="text-4xl md:text-6xl flex items-end w-full text-[#ecd14b] font-[Display]">
+      <h1 class="text-4xl md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]">
         CV
         <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
       </h1>
     </div>
 
     <div>
-      <article class="flex flex-col md:grid-cols-10 md:grid-rows-8 md:grid">
+      <article class="flex flex-col md:grid-cols-10 md:grid-rows-7 md:grid">
         <div class="flex items-center justify-center p-6 mt-10 md:p-0 col-start-1 col-end-3 row-start-1 row-end-4 border-solid border-2 md:border-0 md:border-r-2 md:mt-0 border-[#ecd14b]">
-          <Image src={education} alt="CV education" class="md:w-22" />
+          <Image src={education} alt="CV education" class="md:w-22 uddannelse" />
         </div>
 
         <div class="flex flex-col md:mx-auto md:justify-center md:items-center col-start-3 col-end-5 row-start-1 row-end-4 py-6 border-solid md:border-r-2 border-[#ecd14b] w-full">
@@ -123,7 +131,7 @@ import some from "../assets/images/some.webp";
         </div>
 
         <div class="flex items-center justify-center p-6 md:p-0 col-start-5 col-end-7 row-start-1 row-end-5 border-solid border-2 md:border-0 md:border-r-2 border-[#ecd14b]">
-          <Image src={works} alt="CV erfaringer" class="md:w-22" />
+          <Image src={works} alt="CV erfaringer" class="md:w-22 erfaring" />
         </div>
 
         <div class="flex flex-col md:mx-auto col-start-7 col-end-11 row-start-1 row-end-5 border-solid border-[#ecd14b]">
@@ -145,7 +153,7 @@ import some from "../assets/images/some.webp";
         </div>
 
         <div class="flex items-center justify-center p-6 mt-6 md:mt-0 col-start-3 col-end-5 row-start-4 row-end-8 border-solid border-2 md:border-0 md:border-r-2 md:border-t-2 border-[#ecd14b]">
-          <Image src={fly} alt="CV Tværkulturel erfaring" class="md:w-22" />
+          <Image src={fly} alt="CV Tværkulturel erfaring" class="fly md:w-22" />
         </div>
 
         <div class="flex flex-col md:justify-center md:items-center md:mx-auto w-full col-start-1 col-end-3 row-start-4 row-end-8 py-6 md:border-solid md:border-r-2 md:border-t-2 border-[#ecd14b]">
@@ -168,7 +176,7 @@ import some from "../assets/images/some.webp";
           </div>
         </div>
         <div class="flex items-center justify-center p-6 col-start-8 col-end-11 row-start-5 row-end-8 border-solid w-full border-2 md:border-0 md:border-t-2 border-[#ecd14b]">
-          <Image src={sprog} alt="CV sprog" class="md:w-22" />
+          <Image src={sprog} alt="CV sprog" class="sprog md:w-22" />
         </div>
 
         <div class="flex flex-col justify-center mx-auto pt-4 md:pb-6 col-start-5 col-end-8 w-full row-start-5 row-end-8 md:border-solid md:border-r-2 md:border-t-2 border-[#ecd14b]">
@@ -192,21 +200,21 @@ import some from "../assets/images/some.webp";
     </div>
   </section>
 
-  <section class="px-4 md:px-6">
+  <section class="px-4 md:px-6 md:pt-28">
     <div class="md:px-6">
       <div class="flex flex-col mx-auto max-w-7xl justify-center pt-10 pb-10 md:pb-28 w-full">
-        <h1 class="text-4xl md:px-6 md:text-6xl flex items-end w-full text-[#ecd14b] font-[Display]" id="projekter">
+        <h1 class="text-4xl md:px-6 md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]" id="projekter">
           Projekter
           <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
         </h1>
       </div>
 
       <article class="flex justify-start items-start content-start flex-wrap m-0 p-0 gap-[28px] row-gap-[20px] md:max-w-7xl mx-auto md:grid md:grid-cols-2 lg:grid-cols-3">
-        <div class="flex flex-col w-full">
+        <div class="flex flex-col w-full digital">
           <a href="https://digitalskraldgruppe6.netlify.app/" target="_blank"><Image src={digital} alt="Digital skraldedag" class="w-full h-auto object-cover rounded-md" /></a>
           <h1 class="py-4 font-semibold text-[20px]">Digital skraldedag</h1>
           <div class="">
-            <p>Redesignet den engelske version af hjemmesiden til den danske version med fokus på interface design og frameworks.</p>
+            <p>Redesign af en engelsk hjemmeside til en dansk version med fokus på interface design og frameworks.</p>
             <div class="flex flex-col gap-2 md:gap-4 pt-2 text-[14px]">
               <div class="flex gap-4 text-[12px] md:text-[14px] md:flex-wrap">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">TailwindCSS</p>
@@ -218,13 +226,13 @@ import some from "../assets/images/some.webp";
         </div>
 
         <div class="flex flex-col">
-          <div class="flex flex-col w-full justify-center">
+          <div class="flex flex-col w-full justify-center susse">
             <a href="https://sussevolanderart.netlify.app//" target="_blank"><Image src={susse} alt="Susse Volander" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Susse Volander</h1>
             <div class="">
-              <p>Redesign af eksisterende hjemmeside med fokus på UI/UX design, webudvikling og fotografi.</p>
+              <p>Redesign af en eksisterende hjemmeside med fokus på forbedret UI / UX design, webudvikling og fotografi.</p>
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px] md:flex-wrap">
-                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Javascript</p>
+                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Figma</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Astro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Photoshop</p>
               </div>
@@ -232,42 +240,41 @@ import some from "../assets/images/some.webp";
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center md:pt-10 lg:pt-0">
+        <div class="flex flex-col justify-center items-center karussel md:pt-10 lg:pt-0">
           <div class="flex flex-col">
             <a href="https://karruselfest.netlify.app/" target="_blank"><Image src={karrusel} alt="Karrusel" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Karrusel</h1>
             <div class="">
-              <p>Redesign af eksisterende hjemmeside med fokus på databaser (Supabase), Astro og komponenter.</p>
+              <p>Redesign af en eksisterende hjemmeside med fokus på databaser, designsystemer og komponenter.</p>
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px]">
-                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Astro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Supabase</p>
+                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Figma</p>
+                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Astro</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center md:pt-10">
+        <div class="flex flex-col justify-center items-center snuggy md:pt-10">
           <div class="flex flex-col mx-auto justify-center">
             <a href="https://snuggyseventyr.netlify.app/spil" target="_blank"><Image src={snuggy} alt="Snuggys Eventyr" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Snuggys Eventyr</h1>
             <div>
-              <p>Den er en spil for børn, med fokus på animationer og illustrator.</p>
-              <div class="flex flex-col gap-4 pt-2 text-[14px]">
-                <div class="flex gap-4 text-[12px] md:text-[14px]">
-                  <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Illustrator</p>
-                  <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">JavaScript</p>
-                </div>
+              <p>Spil for børn med fokus på animationer, interaktivt design og illustrationer.</p>
+              <div class="flex gap-4 pt-2 text-[12px] md:text-[14px]">
+                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Illustrator</p>
+                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">JavaScript</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center md:pt-10">
+        <div class="flex flex-col justify-center pleasant items-center md:pt-10">
           <div class="flex flex-col">
             <a href="https://www.youtube.com/watch?v=s2HgdR51fQc" target="_blank"><Image src={pleasant} alt="Pleasant" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Pleasant</h1>
             <div class="">
-              <p>Den er et interview video, med fokus på filmer og redegering videoen.</p>
+              <p>Interview video om miljøbevidsthed med fokus på videooptagelse og foto / videoredigering.</p>
               <div class="flex gap-4 text-[12px] pt-2 md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Premiere Pro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">YouTube</p>
@@ -276,12 +283,12 @@ import some from "../assets/images/some.webp";
           </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center md:pt-10">
+        <div class="flex flex-col justify-center unge items-center md:pt-10">
           <div class="flex flex-col justify-center">
             <a href="https://www.youtube.com/watch?v=_enJwGTl9HU" target="_blank"><Image src={some} alt="Ungeanalyse" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Ungeanalyse</h1>
             <div class="">
-              <p>Den er en motiongrafik video, med fokus på motiongrafik og datavisualisering.</p>
+              <p>Kampagnevideo om sociale medier med fokus på motion graphics og effektiv datavisualisering.</p>
               <div class="flex pt-2 gap-4 text-[12px] md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Premiere Pro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Illustrator</p>
@@ -293,3 +300,97 @@ import some from "../assets/images/some.webp";
     </div>
   </section>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+  const profil = document.querySelector(".profil");
+  inView(profil, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInLeft", "fadeInOpacity");
+  });
+
+  const om_mig = document.querySelector(".om_mig");
+  inView(om_mig, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInRight", "fadeInOpacity");
+  });
+
+  const computer = document.querySelector(".computer");
+  inView(computer, ({ target }) => {
+    target.classList.add("animate__animated", "animate__flipInY", "fadeInOpacity");
+  });
+
+  // Tilføj forsinkelse til code animation
+  const code = document.querySelector(".code");
+  inView(code, ({ target }) => {
+    // Angiv forsinkelsen i millisekunder (f.eks. 1000 ms = 1 sekund)
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__flipInY", "fadeInOpacity");
+    }, 1000); // 1 sekund forsinkelse
+  });
+
+  const puzzle = document.querySelector(".puzzle");
+  inView(puzzle, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__flipInY", "fadeInOpacity");
+    }, 2000);
+  });
+
+  const uddannelse = document.querySelector(".uddannelse");
+  inView(uddannelse, ({ target }) => {
+    target.classList.add("animate__animated", "animate__bounce", "fadeInOpacity");
+  });
+  const erfaring = document.querySelector(".erfaring");
+  inView(erfaring, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__bounce", "fadeInOpacity");
+    }, 1000);
+  });
+  const fly = document.querySelector(".fly");
+  inView(fly, ({ target }) => {
+    target.classList.add("animate__animated", "animate__rotateIn", "fadeInOpacity");
+  });
+
+  const sprog = document.querySelector(".sprog");
+  inView(sprog, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__rotateIn", "fadeInOpacity");
+    }, 1000);
+  });
+
+  const digital = document.querySelector(".digital");
+  inView(digital, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
+    }, 1000);
+  });
+
+  const susse = document.querySelector(".susse");
+  inView(susse, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");
+    }, 1000);
+  });
+  const karussel = document.querySelector(".karussel");
+  inView(karussel, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
+    }, 1000);
+  });
+  const snuggy = document.querySelector(".snuggy");
+  inView(snuggy, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
+    }, 1000);
+  });
+  const pleasant = document.querySelector(".pleasant");
+  inView(pleasant, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");
+    }, 1000);
+  });
+  const unge = document.querySelector(".unge");
+  inView(unge, ({ target }) => {
+    setTimeout(() => {
+      target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
+    }, 1000);
+  });
+</script>
