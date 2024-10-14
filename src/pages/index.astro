@@ -25,10 +25,16 @@ import favicon from "../assets/images/favicon_1.svg";
         <div class="flex flex-col justify-center px-4">
           <p class="text-[#F4F4ED] text-[18px] font-[text] tracking-wide md:px-4 md:text-[24px] animate__animated animate__slideInUp">Kreativ / Organiseret / Engageret</p>
           <h1 class="text-[#ecd14b] text-4xl break-words hyphens-auto md:px-4 md:text-6xl lg:text-[100px] font-[Display] cssanimation leBlurInRight sequence">DIGITAL DESIGNER</h1>
+
           <div class="flex">
             <div class="text-[#ecd14b] text-4xl flex justify-start md:px-4 md:text-6xl lg:text-[100px] md:justify-end md:pl-72 lg:pl-72 font-[Display]">
               <Image src={favicon} alt="me" class="hidden md:block md:w-24 justify-end w-full animate__animated animate__lightSpeedInLeft m-2" />
-              <h1 class="cssanimation leBlurInRight sequence">HUI-JIN BAK</h1>
+              <div id="lydeffekt" class="" x-data="{ sound: $refs.lydeffekt }" x-init="sound.load()">
+                <h1 class="cssanimation leBlurInRight sequence" @mouseenter="$refs.lydeffekt.play()" @mouseleave="sound.pause(); sound.currentTime = 0;">HUI-JIN BAK</h1>
+                <audio x-ref="lydeffekt">
+                  <source src="navn.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
             </div>
           </div>
         </div>
@@ -44,10 +50,13 @@ import favicon from "../assets/images/favicon_1.svg";
           Om mig
           <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
         </h1>
-        <p class="flex-1 items-center justify-center pt-6 lg:text-justify md:pt-6 lg:mt-8 lg:px-8">
-          Hej, mit navn er <span class="font-bold italic text-[#ecd14b]">Hui-jin Bak</span>, og jeg er <span class="font-bold text-[#ecd14b] italic">en digital designer</span> bosat i København. Jeg kommer oprindeligt fra Sydkorea, og <span class="font-bold italic text-[#ecd14b]">studerer nu multimediedesign på KEA.</span> I løbet af mine halvandet år på studiet, har jeg udviklet 10 forskellige hjemmesider. Jeg søger <span class="font-bold text-[#ecd14b] italic">en praktikplads</span> inden for <span class="font-bold text-[#ecd14b] italic">UI/UX design, webdesign og grafisk design.</span> Med erfaring i HTML, CSS, JavaScript og Figma har jeg skabt brugervenlige og responsive websites, der kombinerer æstetik med funktionalitet. Jeg er passioneret omkring webdesign og stræber efter at skabe digitale
-          løsninger, der er både smukke og intuitive.
-        </p>
+        <div class="flex-1 items-center justify-center pt-6 lg:text-left md:pt-6 lg:mt-8 lg:px-8">
+          <p>Hej, mit navn er <span class="font-bold italic text-[#ecd14b]">Hui-jin Bak</span>, og jeg er <span class="font-bold text-[#ecd14b] italic">en digital designer</span> bosat i København. Jeg kommer oprindeligt fra Sydkorea, og <span class="font-bold italic text-[#ecd14b]">studerer nu multimediedesign på KEA.</span> I løbet af mine halvandet år på studiet, har jeg udviklet 10 forskellige hjemmesider.</p>
+          <br />
+          <p>Jeg søger <span class="font-bold text-[#ecd14b] italic">en praktikplads</span> inden for <span class="font-bold text-[#ecd14b] italic">UI/UX design, webdesign og grafisk design.</span> Med erfaring i HTML, CSS, JavaScript og Figma har jeg skabt brugervenlige og responsive websites, der kombinerer æstetik med funktionalitet.</p>
+          <br />
+          <p>Jeg er passioneret omkring webdesign og stræber efter at skabe digitale løsninger, der er både smukke og intuitive.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -138,14 +147,17 @@ import favicon from "../assets/images/favicon_1.svg";
             <div class="pb-2 md:text-left">
               <p class="font-bold">Lampros Kraft / Product Listing Coordinator, Assistant</p>
               <p class="text-[14px]">2015 - 2016 (i Sydkorea)</p>
+              <p>Indsamling, opdatering og vedligeholdelse af produktinformation.</p>
             </div>
             <div>
               <p class="font-bold">In The Block / Graphic Designer, Assistant</p>
               <p class="text-[14px]">2014 - 2015 (i Sydkorea)</p>
+              <p>Billedredigering / Layoutdesign</p>
             </div>
             <div>
               <p class="font-bold">Sekyung Printing / Printing Designer, Deltidsjob</p>
               <p class="text-[14px]">2011 - 2013 (i Sydkorea)</p>
+              <p>Design og produktion af tryksager, herunder visitkort, brochurer og bannere osv.</p>
             </div>
           </div>
         </div>
@@ -212,7 +224,7 @@ import favicon from "../assets/images/favicon_1.svg";
           <a href="https://digitalskraldgruppe6.netlify.app/" target="_blank"><Image src={digital} alt="Digital skraldedag" class="w-full h-auto object-cover rounded-md" /></a>
           <h1 class="py-4 font-semibold text-[20px]">Digital skraldedag</h1>
           <div class="">
-            <p>Redesign af en engelsk hjemmeside til en dansk version med fokus på interface design og frameworks.</p>
+            <p>Jeg redesignede en hjemmeside, hvor jeg fokuserede på interface-design, grafisk design og frameworks.</p>
             <div class="flex flex-col gap-2 md:gap-4 pt-2 text-[14px]">
               <div class="flex gap-4 text-[12px] md:text-[14px] md:flex-wrap">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">TailwindCSS</p>
@@ -228,7 +240,7 @@ import favicon from "../assets/images/favicon_1.svg";
             <a href="https://sussevolanderart.netlify.app/" target="_blank"><Image src={susse} alt="Susse Volander" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Susse Volander</h1>
             <div class="">
-              <p>Redesign af en eksisterende hjemmeside med fokus på forbedret UI / UX design, webudvikling og fotografi.</p>
+              <p>Arbejdede med UI/UX design, fotografi og optimerede webudviklingen i redesign af en kunstners hjemmeside.</p>
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px] md:flex-wrap">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Figma</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Astro</p>
@@ -243,7 +255,7 @@ import favicon from "../assets/images/favicon_1.svg";
             <a href="https://karruselfest.netlify.app/" target="_blank"><Image src={karrusel} alt="Karrusel" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Karrusel</h1>
             <div class="">
-              <p>Redesign af en eksisterende hjemmeside med fokus på databaser, designsystemer og komponenter.</p>
+              <p>Fokuserede på databaser, designsystemer og komponenter i redesign af en musikfestivals hjemmeside.</p>
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Supabase</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Figma</p>
@@ -258,7 +270,7 @@ import favicon from "../assets/images/favicon_1.svg";
             <a href="https://snuggyseventyr.netlify.app/spil" target="_blank"><Image src={snuggy} alt="Snuggys Eventyr" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Snuggys Eventyr</h1>
             <div>
-              <p>Spil for børn med fokus på animationer, interaktivt design og illustrationer.</p>
+              <p>Jeg lavede et spil for børn med fokus på animationer, interaktivt design og illustrationer med grafiske elementer.</p>
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Illustrator</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">JavaScript</p>
@@ -272,7 +284,7 @@ import favicon from "../assets/images/favicon_1.svg";
             <a href="https://www.youtube.com/watch?v=s2HgdR51fQc" target="_blank"><Image src={pleasant} alt="Pleasant" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Pleasant</h1>
             <div class="">
-              <p>Interview video om miljøbevidsthed med fokus på videooptagelse og foto / videoredigering.</p>
+              <p>Interview-video om miljøbevidsthed, hvor jeg fokuserede på videooptagelse og foto / videoredigering.</p>
               <div class="flex gap-4 text-[12px] pt-2 md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Premiere Pro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">YouTube</p>
@@ -286,7 +298,7 @@ import favicon from "../assets/images/favicon_1.svg";
             <a href="https://www.youtube.com/watch?v=_enJwGTl9HU" target="_blank"><Image src={some} alt="Ungeanalyse" class="w-full h-auto object-cover rounded-md" /></a>
             <h1 class="py-4 font-semibold text-[20px]">Ungeanalyse</h1>
             <div class="">
-              <p>Kampagnevideo om sociale medier med fokus på motion graphics og effektiv datavisualisering.</p>
+              <p>Jeg lavede en kampagnevideo om sociale medier med fokus på motion graphics og effektiv datavisualisering.</p>
               <div class="flex pt-2 gap-4 text-[12px] md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Premiere Pro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Illustrator</p>
@@ -298,7 +310,6 @@ import favicon from "../assets/images/favicon_1.svg";
     </div>
   </section>
 </MainLayout>
-
 <script>
   import { inView } from "motion";
   const profil = document.querySelector(".profil");
