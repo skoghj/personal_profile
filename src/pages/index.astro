@@ -24,10 +24,10 @@ import favicon from "../assets/images/favicon_1.svg";
       <div class="flex justify-center items-center mx-auto gap-4 relative">
         <div class="flex flex-col justify-center px-4">
           <p class="text-[#F4F4ED] text-[18px] font-[text] tracking-wide md:px-4 md:text-[24px] animate__animated animate__slideInUp">Kreativ / Organiseret / Engageret</p>
-          <h1 class="text-[#ecd14b] text-4xl break-words hyphens-auto md:px-4 md:text-6xl lg:text-[100px] font-[Display] cssanimation leBlurInRight sequence">DIGITAL DESIGNER</h1>
+          <h1 class="text-[#ecd14b] text-4xl break-words hyphens-auto md:px-4 sm:text-6xl md:text-6xl lg:text-[100px] font-[Display] cssanimation leBlurInRight sequence">DIGITAL DESIGNER</h1>
 
           <div class="flex">
-            <div class="text-[#ecd14b] text-4xl flex justify-start md:px-4 md:text-6xl lg:text-[100px] md:justify-end md:pl-72 lg:pl-72 font-[Display]">
+            <div class="text-[#ecd14b] text-4xl flex justify-start md:px-4 sm:text-6xl md:text-6xl lg:text-[100px] md:justify-end md:pl-[220px] lg:pl-72 font-[Display]">
               <Image src={favicon} alt="me" class="hidden md:block md:w-24 justify-end w-full animate__animated animate__lightSpeedInLeft m-2" />
               <div id="lydeffekt" class="" x-data="{ sound: $refs.lydeffekt }" x-init="sound.load()">
                 <h1 class="cssanimation leBlurInRight sequence" @mouseenter="$refs.lydeffekt.play()" @mouseleave="sound.pause(); sound.currentTime = 0;">HUI-JIN BAK</h1>
@@ -44,18 +44,18 @@ import favicon from "../assets/images/favicon_1.svg";
 
   <section class="flex flex-col justify-center px-4 items-center mx-0 pb-10 md:pb-28">
     <div class="w-full gap-10 mx-auto pt-10 md:pt-20 md:grid md:grid-cols-2 md:max-w-7xl md:px-6">
-      <div class="flex justify-center items-center profil md:justify-start md:items-start"><Image src={profil} alt="profil picture" class="w-full h-auto rounded-lg" /></div>
+      <div class="flex justify-center items-center profil md:justify-start md:items-start"><Image src={profil} alt="profil picture" class="w-[400px] md:w-full h-auto rounded-lg sm:w-[500px]" /></div>
       <div class="flex flex-col items-start om_mig">
         <h1 class="text-4xl pt-10 md:pt-0 md:text-6xl flex items-end w-full tracking-wide text-[#ecd14b] font-[Display]">
           Om mig
           <span class="border-solid border-b-2 border-[#ecd14b] flex-1 h-1 ml-2"></span>
         </h1>
         <div class="flex-1 items-center justify-center pt-6 lg:text-left md:pt-5 lg:mt-8 lg:px-8">
-          <p>Mit navn er <span class="font-bold italic text-[#ecd14b]">Hui-jin Bak</span>, og jeg er <span class="font-bold text-[#ecd14b] italic">en digital designer</span> bosat i København. Jeg kommer oprindeligt fra Sydkorea, og <span class="font-bold italic text-[#ecd14b]">studerer nu multimediedesign på KEA.</span>I løbet af mine halvandet år på studiet, har jeg udviklet 10 større projekter.</p>
+          <p>Mit navn er <span class="font-bold italic text-[#ecd14b]">Hui-jin Bak</span>, og jeg er <span class="font-bold text-[#ecd14b] italic">en digital designer</span> bosat i København. Jeg kommer oprindeligt fra Sydkorea, og <span class="font-bold italic text-[#ecd14b]">studerer nu multimediedesign på KEA.</span> I løbet af mine halvandet år på studiet, har jeg udviklet 10 større projekter.</p>
           <br />
           <p>Jeg er primært dedikeret til <span class="font-bold text-[#ecd14b] italic">digital konceptudvikling, webudvikling og indholdsproduktion,</span> og stræber altid efter at skabe løsninger, der både er intuitive, funktionelle og visuelt interessante. Denne kombination af æstetik og funktion er kernen i en stor del af mit arbejde.</p>
           <br />
-          <p>For at udvikle mine kompetencer yderligere, søger jeg nu en praktikplads, der kan udfordre og inspirere mig. Som en ansvarlig og nysgerrig person af natur, tager jeg altid gerne imod nye udfordringer, og går til dem med fuld dedikation.</p>
+          <p>For at udvikle mine kompetencer yderligere, søger jeg nu en <span class="font-bold text-[#ecd14b] italic"> praktikplads,</span> der kan udfordre og inspirere mig. Som en <span class="font-bold text-[#ecd14b] italic">ansvarlig og nysgerrig person af natur,</span> tager jeg altid gerne imod nye udfordringer, og går til dem med fuld dedikation.</p>
         </div>
         <p></p>
       </div>
@@ -233,6 +233,7 @@ import favicon from "../assets/images/favicon_1.svg";
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px]">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Alpine.js</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">TailwindCSS</p>
+                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Astro</p>
               </div>
             </div>
           </div>
@@ -262,7 +263,6 @@ import favicon from "../assets/images/favicon_1.svg";
               <div class="flex gap-4 pt-2 text-[12px] md:text-[14px] md:flex-wrap">
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Figma</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Supabase</p>
-                <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Astro</p>
                 <p class="bg-[#1e2e17] px-2 rounded-md md:px-4 py-1">Photoshop</p>
               </div>
             </div>
