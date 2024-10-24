@@ -28,7 +28,7 @@ import favicon from "../assets/images/favicon_1.svg";
 
           <div class="flex">
             <div class="text-[#ecd14b] text-4xl flex justify-start md:px-4 sm:text-6xl md:text-6xl lg:text-[100px] md:justify-end md:pl-[220px] lg:pl-72 font-[Display]">
-              <Image src={favicon} alt="me" class="hidden md:block md:w-24 justify-end w-full animate__animated animate__lightSpeedInLeft m-2" />
+              <Image src={favicon} alt="me" class="hidden sm:block sm:w-16 md:block md:w-24 justify-end w-full animate__animated animate__lightSpeedInLeft m-2" />
               <div id="lydeffekt" class="" x-data="{ sound: $refs.lydeffekt }" x-init="sound.load()">
                 <h1 class="cssanimation leBlurInRight sequence" @mouseenter="$refs.lydeffekt.play()" @mouseleave="sound.pause(); sound.currentTime = 0;">HUI-JIN BAK</h1>
                 <audio x-ref="lydeffekt">
